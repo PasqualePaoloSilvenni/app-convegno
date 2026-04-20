@@ -31,6 +31,9 @@ const VideoSplash = ({ onComplete }) => {
           onEnded={handleVideoEnd}
           autoPlay
           muted
+          playsInline
+          preload="metadata"
+          poster="#000"
         >
           <source 
             src={import.meta.env.BASE_URL + 'videoplayback.mp4'} 
