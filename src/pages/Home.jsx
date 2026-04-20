@@ -19,12 +19,12 @@ const Home = () => {
   return (
     <div className="home-container">
       <header>
-        <img src="/logo.svg" alt="Logo Convegno" className="header-logo" />
+        <img src={import.meta.env.BASE_URL + 'logo.svg'} alt="Logo Convegno" className="header-logo" />
         <div className="header-content">
           <h1>Acqua Summit 2026</h1>
           <p>Ciao! Scegli cosa vuoi fare:</p>
         </div>
-        <img src="/logo.svg" alt="Logo Convegno" className="header-logo" />
+        <img src={import.meta.env.BASE_URL + 'logo.svg'} alt="Logo Convegno" className="header-logo" />
       </header>
 
       <div className="menu-buttons">

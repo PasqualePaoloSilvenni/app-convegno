@@ -33,7 +33,7 @@ const VideoSplash = ({ onComplete }) => {
           muted
         >
           <source 
-            src="/videoplayback.mp4" 
+            src={import.meta.env.BASE_URL + 'videoplayback.mp4'} 
             type="video/mp4" 
           />
           Il tuo browser non supporta i video HTML5
