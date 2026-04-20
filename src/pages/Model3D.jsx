@@ -10,19 +10,19 @@ const Model3D = () => {
     {
       id: 1,
       name: 'Box',
-      url: '/models/Box.glb',
+      url: import.meta.env.BASE_URL + 'models/Box.glb',
       description: 'Modello geometrico di base - Box'
     },
     {
       id: 2,
       name: 'Duck',
-      url: '/models/Duck.glb',
+      url: import.meta.env.BASE_URL + 'models/Duck.glb',
       description: 'Modello organico - Duck'
     },
     {
       id: 3,
       name: 'Fox',
-      url: '/models/Fox.glb',
+      url: import.meta.env.BASE_URL + 'models/Fox.glb',
       description: 'Modello animale realistica - Fox'
     }
   ];
