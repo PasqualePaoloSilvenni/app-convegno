@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { CounterProvider } from './context/CounterContext';
 import VideoSplash from './pages/VideoSplash';
 import Home from './pages/Home';
@@ -48,16 +48,16 @@ function App() {
     setShowVideo(false);
   };
 
-  const getBasename = () => {
-    return import.meta.env.DEV ? '/' : '/app-convegno/';
-  };
+  // Usa HashRouter su GitHub Pages (produzione), BrowserRouter in dev
+  const RouterComponent = import.meta.env.DEV ? Router : HashRouter;
+  const basename = import.meta.env.DEV ? '/' : undefined;
 
   return (
     <CounterProvider>
       {showVideo && <VideoSplash onComplete={handleVideoComplete} />}
-      <Router basename={getBasename()}>
+      <RouterComponent basename={basename}>
         <AppContent showVideo={showVideo} setShowVideo={setShowVideo} />
-      </Router>
+      </RouterComponent>
     </CounterProvider>
   );
 }

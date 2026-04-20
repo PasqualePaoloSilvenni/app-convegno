@@ -38,9 +38,11 @@ const Model3D = () => {
             key={models[selectedModel].id}
             src={models[selectedModel].url}
             alt={models[selectedModel].name}
-            auto-rotate
-            camera-controls
-            touch-action="pan-y"
+            autoRotate
+            cameraControls
+            touchAction="pan-y"
+            exposeShadow
+            arStatus="not-presenting"
             style={{
               width: '100%',
               height: '100%'
