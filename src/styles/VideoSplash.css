@@ -59,32 +59,3 @@
 .skip-video-btn:active {
   transform: translateX(-50%) scale(0.98);
 }
-
-.play-video-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10000;
-  background: rgba(255, 222, 89, 0.9);
-  color: #0f172a;
-  border: 2px solid #1463fe;
-  padding: clamp(20px, 5vw, 30px) clamp(30px, 8vw, 50px);
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  font-weight: 600;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(20, 99, 254, 0.5);
-  white-space: nowrap;
-}
-
-.play-video-btn:hover {
-  background: #FFDE59;
-  transform: translate(-50%, -50%) scale(1.1);
-  box-shadow: 0 10px 30px rgba(20, 99, 254, 0.7);
-}
-
-.play-video-btn:active {
-  transform: translate(-50%, -50%) scale(0.98);
-}

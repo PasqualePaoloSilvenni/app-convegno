@@ -4,22 +4,11 @@ import '../styles/VideoSplash.css';
 const VideoSplash = ({ onComplete }) => {
   const videoRef = useRef(null);
   const [isSkipped, setIsSkipped] = useState(false);
-  const [showPlayBtn, setShowPlayBtn] = useState(true);
-
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(err => {
-        console.log('Autoplay failed:', err);
-      });
-      setShowPlayBtn(false);
-    }
-  };
 
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play().catch(() => {
-        // Se autoplay fallisce, mostra il bottone
-        setShowPlayBtn(true);
+        // Autoplay bloccato, continua comunque
       });
     }
   }, []);
@@ -54,15 +43,6 @@ const VideoSplash = ({ onComplete }) => {
           />
           Il tuo browser non supporta i video HTML5
         </video>
-        
-        {showPlayBtn && (
-          <button 
-            className="play-video-btn"
-            onClick={handlePlay}
-          >
-            ▶️ Riproduci Video
-          </button>
-        )}
         
         <button 
           className="skip-video-btn"
