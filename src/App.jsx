@@ -39,8 +39,8 @@ function PageTransition({ children }) {
 
 function App() {
   const [showVideo, setShowVideo] = useState(() => {
-    // Mostra il video solo se siamo sulla home al primo caricamento
-    return window.location.pathname === '/';
+    const path = window.location.pathname;
+    return path === '/' || path === '/app-convegno/';
   });
 
   const handleVideoComplete = () => {
@@ -48,10 +48,14 @@ function App() {
     setShowVideo(false);
   };
 
+  const getBasename = () => {
+    return import.meta.env.DEV ? '/' : '/app-convegno/';
+  };
+
   return (
     <CounterProvider>
       {showVideo && <VideoSplash onComplete={handleVideoComplete} />}
-      <Router>
+      <Router basename={getBasename()}>
         <AppContent showVideo={showVideo} setShowVideo={setShowVideo} />
       </Router>
     </CounterProvider>
