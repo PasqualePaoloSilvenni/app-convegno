@@ -11,7 +11,7 @@ const MapPage = () => {
       <div className="map-canvas">
         {/* Google Maps Embed */}
         <iframe
-          src="https://www.google.com/maps/d/u/0/embed?mid=1C-NIiWwIYbRjoopez51-dcYGL4ghmWM&ehbc=2E312F&noprof=1"
+          src="https://www.google.com/maps/d/embed?mid=1tvDEDPgHnwgvxmjbaLztlgutxT-MD7s&ehbc=2E312F&noprof=1"
           className="map-embed"
           title="Planimetria dell'evento"
           allowFullScreen=""
