@@ -1,0 +1,170 @@
+/* Calculator Styles */
+
+.calculator-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: clamp(0.5rem, 1.5vw, 1rem);
+  width: 100%;
+}
+
+.calculator-title {
+  color: var(--primary);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  margin-bottom: clamp(0.2rem, 0.6vw, 0.4rem);
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.calculator-subtitle {
+  text-align: center;
+  margin-bottom: clamp(0.2rem, 0.6vw, 0.4rem);
+  color: var(--text-color);
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+}
+
+.bmi-form {
+  background: var(--bg-color);
+  padding: clamp(0.8rem, 1.5vw, 1rem);
+  border-radius: 14px;
+  box-shadow: 0 4px 15px #1463fe1a;
+  border: 2px solid var(--primary);
+  margin-bottom: clamp(0.2rem, 0.6vw, 0.4rem);
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-group {
+  margin-bottom: clamp(0.3rem, 0.6vw, 0.4rem);
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: clamp(0.3rem, 0.5vw, 0.4rem);
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.input-group input {
+  width: 100%;
+  padding: clamp(10px, 1.2vw, 15px);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px #1463fe1a;
+  background-color: white;
+}
+
+.input-select {
+  width: 100%;
+  padding: clamp(10px, 1.2vw, 15px);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  background-color: white;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.input-select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px #1463fe1a;
+}
+
+.btn-calculate {
+  background: var(--primary);
+  box-shadow: 0 4px 15px #1463fe4d;
+  transition: all 0.3s ease;
+}
+
+.btn-calculate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px #1463fe66;
+}
+
+.result-card {
+  margin-top: clamp(0.2rem, 0.6vw, 0.4rem);
+  padding: clamp(0.8rem, 1.5vw, 1rem);
+  background: var(--bg-color);
+  border-radius: 14px;
+  text-align: center;
+  border: 2px solid var(--primary);
+  box-shadow: 0 8px 24px #1463fe1a;
+  animation: slideIn 0.4s ease-out;
+  width: 100%;
+  max-width: 500px;
+}
+
+.result-title {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  color: var(--primary);
+  margin-bottom: clamp(0.1rem, 0.2vw, 0.2rem);
+  font-weight: 600;
+}
+
+.result-value {
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-weight: 900;
+  color: var(--primary);
+  margin: clamp(0.2rem, 0.3vw, 0.3rem) 0;
+  text-shadow: 2px 2px 8px #1463fe33;
+}
+
+.result-text {
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  color: var(--text-color);
+  font-weight: 500;
+  margin-bottom: clamp(0.2rem, 0.4vw, 0.3rem);
+}
+
+.result-bottles {
+  display: flex;
+  justify-content: center;
+  gap: clamp(4px, 0.8vw, 8px);
+  flex-wrap: wrap;
+  margin-top: clamp(0.3rem, 0.6vw, 0.5rem);
+}
+
+.bottle-icon {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.btn-back {
+  background: var(--primary);
+  margin-top: clamp(0.2rem, 0.6vw, 0.4rem);
+  box-shadow: 0 4px 15px #1463fe4d;
+  width: 100%;
+  max-width: 500px;
+}
+
+.btn-back:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px #1463fe66;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

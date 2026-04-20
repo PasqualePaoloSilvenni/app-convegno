@@ -1,0 +1,55 @@
+/* Map Page Styles */
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: clamp(8px, 1.5vw, 12px);
+  width: 100%;
+  text-align: center;
+}
+
+.map-title {
+  color: var(--primary);
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  margin-bottom: clamp(0.3rem, 1vw, 0.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.map-canvas {
+  position: relative;
+  height: clamp(350px, 65vh, 550px);
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: clamp(0.4rem, 1vw, 0.8rem);
+  border: 3px solid var(--primary);
+  box-shadow: 0 8px 24px #1463fe26;
+}
+
+.map-embed {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.btn-back {
+  background: var(--primary);
+  box-shadow: 0 4px 15px #1463fe4d;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 800px;
+}
+
+.btn-back:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px #1463fe66;
+}
+
+
