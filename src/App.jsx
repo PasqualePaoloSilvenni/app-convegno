@@ -12,6 +12,13 @@ import './App.css';
 // Componente interno per tracciare la location
 function AppContent({ showVideo, setShowVideo }) {
   const location = useLocation();
+
+  React.useEffect(() => {
+    // Se non siamo sulla home, nascondi il video
+    if (location.pathname !== '/') {
+      setShowVideo(false);
+    }
+  }, [location.pathname, setShowVideo]);
   
   return (
     <div className="app-container">
