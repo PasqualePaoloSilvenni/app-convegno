@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { CounterProvider } from './context/CounterContext';
+import Grainient from './components/Grainient';
 import VideoSplash from './pages/VideoSplash';
 import Home from './pages/Home';
 import MapPage from './pages/MapPage';
@@ -50,10 +51,21 @@ function App() {
 
   return (
     <CounterProvider>
-      {showVideo && <VideoSplash onComplete={handleVideoComplete} />}
-      <Router>
-        <AppContent showVideo={showVideo} setShowVideo={setShowVideo} />
-      </Router>
+      <div className="app-wrapper">
+        <div className="app-background">
+          <Grainient
+            color1="#003292"
+            color2="#ffcf00"
+            color3="#003292"
+            timeSpeed={0.5}
+            grainAnimated
+          />
+        </div>
+        {showVideo && <VideoSplash onComplete={handleVideoComplete} />}
+        <Router>
+          <AppContent showVideo={showVideo} setShowVideo={setShowVideo} />
+        </Router>
+      </div>
     </CounterProvider>
   );
 }

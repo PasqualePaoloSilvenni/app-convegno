@@ -52,6 +52,26 @@
   }
 }
 
+/* Wrapper principale con background gradient */
+.app-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background Grainient - posizionato dietro tutto il contenuto */
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* Classe per le transizioni di pagina */
 .page-transition {
   animation: fadeIn 0.5s ease-in-out, slideInFromRight 0.5s ease-in-out;
@@ -69,6 +89,8 @@
   width: 100%;
   min-height: 100vh;
   flex: 1;
+  position: relative;
+  z-index: 0;
 }
 
 .counter {
