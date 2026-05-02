@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { CounterProvider } from './context/CounterContext';
+import Grainient from './components/Grainient';
 import VideoSplash from './pages/VideoSplash';
 import Home from './pages/Home';
 import MapPage from './pages/MapPage';
@@ -62,9 +63,9 @@ function App() {
   return (
     <CounterProvider>
       {showVideo && <VideoSplash onComplete={handleVideoComplete} />}
-      <RouterComponent basename={basename}>
+      <Router>
         <AppContent showVideo={showVideo} setShowVideo={setShowVideo} />
-      </RouterComponent>
+      </Router>
     </CounterProvider>
   );
 }
