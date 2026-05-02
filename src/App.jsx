@@ -62,10 +62,21 @@ function App() {
 
   return (
     <CounterProvider>
-      {showVideo && <VideoSplash onComplete={handleVideoComplete} />}
-      <Router>
-        <AppContent showVideo={showVideo} setShowVideo={setShowVideo} />
-      </Router>
+      <div className="app-wrapper">
+        <div className="app-background">
+          <Grainient
+            color1="#003292"
+            color2="#ffcf00"
+            color3="#003292"
+            timeSpeed={0.5}
+            grainAnimated
+          />
+        </div>
+        {showVideo && <VideoSplash onComplete={handleVideoComplete} />}
+        <RouterComponent basename={basename}>
+          <AppContent showVideo={showVideo} setShowVideo={setShowVideo} />
+        </RouterComponent>
+      </div>
     </CounterProvider>
   );
 }
