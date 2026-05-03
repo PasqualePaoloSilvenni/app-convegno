@@ -11,7 +11,7 @@
 }
 
 .calculator-title {
-  color: var(--primary);
+  color: white;
   font-size: clamp(1.2rem, 3vw, 1.6rem);
   margin-bottom: clamp(0.2rem, 0.6vw, 0.4rem);
   text-align: center;
